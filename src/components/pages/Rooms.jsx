@@ -135,10 +135,9 @@ const validateForm = () => {
     if (validImages.length === 0) {
       errors.room_images = "At least one room image is required"
     }
-
-    // Check for duplicate room number
+// Check for duplicate room number
     const isDuplicate = rooms.some(
-      room => room.roomNumber.toLowerCase() === formData.roomNumber.trim().toLowerCase()
+      room => room?.roomNumber?.toLowerCase() === formData.roomNumber.trim().toLowerCase()
     )
     if (isDuplicate) {
       errors.roomNumber = "Room number already exists"
@@ -193,12 +192,12 @@ const newRoom = {
     loadRooms()
   }, [])
 
-  const handleStatusChange = async (roomId, newStatus) => {
+const handleStatusChange = async (roomId, newStatus) => {
     try {
       const room = rooms.find(r => r.Id === roomId)
       await roomsService.update(roomId, { ...room, status: newStatus })
       setRooms(rooms.map(r => r.Id === roomId ? { ...r, status: newStatus } : r))
-      toast.success(`Room ${room.number} status updated to ${newStatus}`)
+      toast.success(`Room ${room?.number || room?.roomNumber || 'Unknown'} status updated to ${newStatus}`)
     } catch (err) {
       toast.error("Failed to update room status")
     }
@@ -273,11 +272,11 @@ actionLabel={filter === "All" ? "Add Room" : "Clear Filter"}
       {selectedRoom && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
           <Card variant="elevated" className="max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-            <div className="p-6">
+<div className="p-6">
               <div className="flex items-start justify-between mb-6">
                 <div>
-                  <h2 className="text-2xl font-bold text-slate-900">Room {selectedRoom.number}</h2>
-                  <p className="text-slate-600 capitalize">{selectedRoom.type}</p>
+                  <h2 className="text-2xl font-bold text-slate-900">Room {selectedRoom?.number || selectedRoom?.roomNumber || 'Unknown'}</h2>
+                  <p className="text-slate-600 capitalize">{selectedRoom?.type || 'N/A'}</p>
                 </div>
                 <button 
                   onClick={() => setSelectedRoom(null)}
@@ -309,10 +308,10 @@ actionLabel={filter === "All" ? "Add Room" : "Clear Filter"}
                   <div>
                     <label className="block text-sm font-semibold text-slate-700 mb-2">
                       Price per Night
-                    </label>
+</label>
                     <div className="flex items-center gap-2">
                       <ApperIcon name="DollarSign" size={18} className="text-slate-600" />
-                      <span className="text-lg font-bold text-slate-900">{selectedRoom.pricePerNight}</span>
+                      <span className="text-lg font-bold text-slate-900">{selectedRoom?.pricePerNight || selectedRoom?.rate || 'N/A'}</span>
                     </div>
                   </div>
                 </div>
