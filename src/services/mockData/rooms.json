@@ -1,0 +1,122 @@
+[
+  {
+    "Id": 1,
+    "number": "101",
+    "type": "standard",
+    "capacity": 2,
+    "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar"],
+    "status": "Available",
+    "pricePerNight": 120,
+    "photos": ["room101-1.jpg", "room101-2.jpg"]
+  },
+  {
+    "Id": 2,
+    "number": "102",
+    "type": "standard",
+    "capacity": 2,
+    "amenities": ["Wi-Fi", "TV", "Air Conditioning"],
+    "status": "Occupied",
+    "pricePerNight": 120,
+    "photos": ["room102-1.jpg"]
+  },
+  {
+    "Id": 3,
+    "number": "103",
+    "type": "deluxe",
+    "capacity": 4,
+    "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar", "Balcony", "Ocean View"],
+    "status": "Available",
+    "pricePerNight": 180,
+    "photos": ["room103-1.jpg", "room103-2.jpg", "room103-3.jpg"]
+  },
+  {
+    "Id": 4,
+    "number": "201",
+    "type": "suite",
+    "capacity": 6,
+    "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar", "Balcony", "Ocean View", "Jacuzzi", "Living Room"],
+    "status": "Available",
+    "pricePerNight": 300,
+    "photos": ["room201-1.jpg", "room201-2.jpg", "room201-3.jpg", "room201-4.jpg"]
+  },
+  {
+    "Id": 5,
+    "number": "202",
+    "type": "deluxe",
+    "capacity": 4,
+    "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar", "Balcony"],
+    "status": "Maintenance",
+    "pricePerNight": 180,
+    "photos": ["room202-1.jpg"]
+  },
+  {
+    "Id": 6,
+    "number": "203",
+    "type": "standard",
+    "capacity": 2,
+    "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar"],
+    "status": "Clean",
+    "pricePerNight": 120,
+    "photos": ["room203-1.jpg", "room203-2.jpg"]
+  },
+  {
+    "Id": 7,
+    "number": "301",
+    "type": "suite",
+    "capacity": 6,
+    "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar", "Balcony", "City View", "Jacuzzi", "Living Room", "Kitchenette"],
+    "status": "Occupied",
+    "pricePerNight": 320,
+    "photos": ["room301-1.jpg", "room301-2.jpg", "room301-3.jpg"]
+  },
+  {
+    "Id": 8,
+    "number": "302",
+    "type": "deluxe",
+    "capacity": 4,
+    "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar", "Balcony", "City View"],
+    "status": "Dirty",
+    "pricePerNight": 180,
+    "photos": ["room302-1.jpg"]
+  },
+  {
+    "Id": 9,
+    "number": "303",
+    "type": "standard",
+    "capacity": 3,
+    "amenities": ["Wi-Fi", "TV", "Air Conditioning"],
+    "status": "Available",
+    "pricePerNight": 110,
+    "photos": ["room303-1.jpg"]
+  },
+  {
+    "Id": 10,
+    "number": "401",
+    "type": "presidential",
+    "capacity": 8,
+    "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar", "Balcony", "Ocean View", "Jacuzzi", "Living Room", "Kitchenette", "Dining Room", "Office"],
+    "status": "Available",
+    "pricePerNight": 500,
+    "photos": ["room401-1.jpg", "room401-2.jpg", "room401-3.jpg", "room401-4.jpg", "room401-5.jpg"]
+  },
+  {
+    "Id": 11,
+    "number": "104",
+    "type": "standard",
+    "capacity": 2,
+    "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar"],
+    "status": "Available",
+    "pricePerNight": 120,
+    "photos": ["room104-1.jpg"]
+  },
+  {
+    "Id": 12,
+    "number": "105",
+    "type": "deluxe",
+    "capacity": 4,
+    "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar", "Balcony", "Garden View"],
+    "status": "Available",
+    "pricePerNight": 160,
+    "photos": ["room105-1.jpg", "room105-2.jpg"]
+  }
+]

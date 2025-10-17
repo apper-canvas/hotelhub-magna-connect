@@ -1,0 +1,198 @@
+[
+  {
+    "Id": 1,
+    "firstName": "John",
+    "lastName": "Smith",
+    "email": "john.smith@email.com",
+    "phone": "+1-555-0101",
+    "preferences": {
+      "roomType": "deluxe",
+      "floorPreference": "high",
+      "dietaryRestrictions": "vegetarian"
+    },
+    "vipStatus": true,
+    "stayHistory": [
+      {
+        "Id": 1,
+        "checkIn": "2023-08-15T14:00:00Z",
+        "checkOut": "2023-08-20T11:00:00Z",
+        "roomNumber": "301",
+        "totalAmount": 1600
+      },
+      {
+        "Id": 2,
+        "checkIn": "2023-06-10T14:00:00Z",
+        "checkOut": "2023-06-15T11:00:00Z",
+        "roomNumber": "203",
+        "totalAmount": 900
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "firstName": "Sarah",
+    "lastName": "Johnson",
+    "email": "sarah.johnson@email.com",
+    "phone": "+1-555-0102",
+    "preferences": {
+      "roomType": "standard",
+      "amenities": ["Wi-Fi", "Ocean View"]
+    },
+    "vipStatus": false,
+    "stayHistory": [
+      {
+        "Id": 3,
+        "checkIn": "2023-07-01T14:00:00Z",
+        "checkOut": "2023-07-05T11:00:00Z",
+        "roomNumber": "101",
+        "totalAmount": 480
+      }
+    ]
+  },
+  {
+    "Id": 3,
+    "firstName": "Michael",
+    "lastName": "Davis",
+    "email": "michael.davis@email.com",
+    "phone": "+1-555-0103",
+    "preferences": {
+      "roomType": "suite",
+      "businessFacilities": true,
+      "lateCheckout": true
+    },
+    "vipStatus": true,
+    "stayHistory": [
+      {
+        "Id": 4,
+        "checkIn": "2023-09-01T14:00:00Z",
+        "checkOut": "2023-09-08T11:00:00Z",
+        "roomNumber": "401",
+        "totalAmount": 3500
+      },
+      {
+        "Id": 5,
+        "checkIn": "2023-05-15T14:00:00Z",
+        "checkOut": "2023-05-20T11:00:00Z",
+        "roomNumber": "201",
+        "totalAmount": 1500
+      },
+      {
+        "Id": 6,
+        "checkIn": "2023-03-10T14:00:00Z",
+        "checkOut": "2023-03-15T11:00:00Z",
+        "roomNumber": "301",
+        "totalAmount": 1600
+      }
+    ]
+  },
+  {
+    "Id": 4,
+    "firstName": "Emily",
+    "lastName": "Wilson",
+    "email": "emily.wilson@email.com",
+    "phone": "+1-555-0104",
+    "preferences": {
+      "roomType": "deluxe",
+      "quietRoom": true,
+      "highFloor": true
+    },
+    "vipStatus": false,
+    "stayHistory": [
+      {
+        "Id": 7,
+        "checkIn": "2023-08-20T14:00:00Z",
+        "checkOut": "2023-08-25T11:00:00Z",
+        "roomNumber": "103",
+        "totalAmount": 900
+      }
+    ]
+  },
+  {
+    "Id": 5,
+    "firstName": "David",
+    "lastName": "Brown",
+    "email": "david.brown@email.com",
+    "phone": "+1-555-0105",
+    "preferences": {
+      "roomType": "standard",
+      "smokingRoom": false,
+      "accessibility": true
+    },
+    "vipStatus": false,
+    "stayHistory": []
+  },
+  {
+    "Id": 6,
+    "firstName": "Lisa",
+    "lastName": "Anderson",
+    "email": "lisa.anderson@email.com",
+    "phone": "+1-555-0106",
+    "preferences": {
+      "roomType": "suite",
+      "oceanView": true,
+      "roomService": true,
+      "dietaryRestrictions": "gluten-free"
+    },
+    "vipStatus": true,
+    "stayHistory": [
+      {
+        "Id": 8,
+        "checkIn": "2023-07-15T14:00:00Z",
+        "checkOut": "2023-07-22T11:00:00Z",
+        "roomNumber": "401",
+        "totalAmount": 3500
+      },
+      {
+        "Id": 9,
+        "checkIn": "2023-04-10T14:00:00Z",
+        "checkOut": "2023-04-15T11:00:00Z",
+        "roomNumber": "201",
+        "totalAmount": 1500
+      }
+    ]
+  },
+  {
+    "Id": 7,
+    "firstName": "Robert",
+    "lastName": "Martinez",
+    "email": "robert.martinez@email.com",
+    "phone": "+1-555-0107",
+    "preferences": {
+      "roomType": "deluxe",
+      "balcony": true,
+      "miniBar": true
+    },
+    "vipStatus": false,
+    "stayHistory": [
+      {
+        "Id": 10,
+        "checkIn": "2023-06-01T14:00:00Z",
+        "checkOut": "2023-06-07T11:00:00Z",
+        "roomNumber": "202",
+        "totalAmount": 1080
+      }
+    ]
+  },
+  {
+    "Id": 8,
+    "firstName": "Jennifer",
+    "lastName": "Garcia",
+    "email": "jennifer.garcia@email.com",
+    "phone": "+1-555-0108",
+    "preferences": {
+      "roomType": "standard",
+      "petFriendly": true,
+      "groundFloor": true
+    },
+    "vipStatus": false,
+    "stayHistory": [
+      {
+        "Id": 11,
+        "checkIn": "2023-09-10T14:00:00Z",
+        "checkOut": "2023-09-13T11:00:00Z",
+        "roomNumber": "104",
+        "totalAmount": 360
+      }
+    ]
+  }
+]

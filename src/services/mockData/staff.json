@@ -1,0 +1,138 @@
+[
+  {
+    "Id": 1,
+    "name": "Maria Rodriguez",
+    "role": "housekeeping",
+    "email": "maria.rodriguez@hotelhub.com",
+    "schedule": [
+      {"day": "Monday", "hours": "6:00 AM - 2:00 PM"},
+      {"day": "Tuesday", "hours": "6:00 AM - 2:00 PM"},
+      {"day": "Wednesday", "hours": "6:00 AM - 2:00 PM"},
+      {"day": "Thursday", "hours": "6:00 AM - 2:00 PM"},
+      {"day": "Friday", "hours": "6:00 AM - 2:00 PM"}
+    ],
+    "activeTasks": [
+      {"room": "101", "type": "Cleaning", "priority": "High"},
+      {"room": "103", "type": "Cleaning", "priority": "Medium"},
+      {"room": "105", "type": "Inspection", "priority": "Low"}
+    ]
+  },
+  {
+    "Id": 2,
+    "name": "James Thompson",
+    "role": "maintenance",
+    "email": "james.thompson@hotelhub.com",
+    "schedule": [
+      {"day": "Monday", "hours": "8:00 AM - 4:00 PM"},
+      {"day": "Tuesday", "hours": "8:00 AM - 4:00 PM"},
+      {"day": "Wednesday", "hours": "8:00 AM - 4:00 PM"},
+      {"day": "Thursday", "hours": "8:00 AM - 4:00 PM"},
+      {"day": "Friday", "hours": "8:00 AM - 4:00 PM"}
+    ],
+    "activeTasks": [
+      {"room": "202", "type": "Maintenance", "priority": "High"},
+      {"room": "301", "type": "Maintenance", "priority": "Medium"}
+    ]
+  },
+  {
+    "Id": 3,
+    "name": "Angela Chen",
+    "role": "front desk",
+    "email": "angela.chen@hotelhub.com",
+    "schedule": [
+      {"day": "Monday", "hours": "7:00 AM - 3:00 PM"},
+      {"day": "Tuesday", "hours": "7:00 AM - 3:00 PM"},
+      {"day": "Wednesday", "hours": "7:00 AM - 3:00 PM"},
+      {"day": "Saturday", "hours": "7:00 AM - 3:00 PM"},
+      {"day": "Sunday", "hours": "7:00 AM - 3:00 PM"}
+    ],
+    "activeTasks": [
+      {"room": "Lobby", "type": "Guest Services", "priority": "Medium"},
+      {"room": "Reception", "type": "Check-in Processing", "priority": "High"}
+    ]
+  },
+  {
+    "Id": 4,
+    "name": "Carlos Santos",
+    "role": "housekeeping",
+    "email": "carlos.santos@hotelhub.com",
+    "schedule": [
+      {"day": "Tuesday", "hours": "2:00 PM - 10:00 PM"},
+      {"day": "Wednesday", "hours": "2:00 PM - 10:00 PM"},
+      {"day": "Thursday", "hours": "2:00 PM - 10:00 PM"},
+      {"day": "Friday", "hours": "2:00 PM - 10:00 PM"},
+      {"day": "Saturday", "hours": "2:00 PM - 10:00 PM"}
+    ],
+    "activeTasks": [
+      {"room": "201", "type": "Cleaning", "priority": "High"},
+      {"room": "203", "type": "Cleaning", "priority": "Medium"}
+    ]
+  },
+  {
+    "Id": 5,
+    "name": "Patricia Williams",
+    "role": "manager",
+    "email": "patricia.williams@hotelhub.com",
+    "schedule": [
+      {"day": "Monday", "hours": "8:00 AM - 6:00 PM"},
+      {"day": "Tuesday", "hours": "8:00 AM - 6:00 PM"},
+      {"day": "Wednesday", "hours": "8:00 AM - 6:00 PM"},
+      {"day": "Thursday", "hours": "8:00 AM - 6:00 PM"},
+      {"day": "Friday", "hours": "8:00 AM - 6:00 PM"}
+    ],
+    "activeTasks": [
+      {"room": "Office", "type": "Staff Meeting", "priority": "High"},
+      {"room": "Administration", "type": "Report Review", "priority": "Medium"},
+      {"room": "Finance", "type": "Budget Planning", "priority": "Low"}
+    ]
+  },
+  {
+    "Id": 6,
+    "name": "Robert Kim",
+    "role": "security",
+    "email": "robert.kim@hotelhub.com",
+    "schedule": [
+      {"day": "Friday", "hours": "6:00 PM - 6:00 AM"},
+      {"day": "Saturday", "hours": "6:00 PM - 6:00 AM"},
+      {"day": "Sunday", "hours": "6:00 PM - 6:00 AM"},
+      {"day": "Monday", "hours": "6:00 PM - 6:00 AM"}
+    ],
+    "activeTasks": [
+      {"room": "Lobby", "type": "Security Patrol", "priority": "High"},
+      {"room": "Parking", "type": "Security Check", "priority": "Medium"}
+    ]
+  },
+  {
+    "Id": 7,
+    "name": "Lisa Park",
+    "role": "housekeeping",
+    "email": "lisa.park@hotelhub.com",
+    "schedule": [
+      {"day": "Saturday", "hours": "6:00 AM - 2:00 PM"},
+      {"day": "Sunday", "hours": "6:00 AM - 2:00 PM"},
+      {"day": "Monday", "hours": "6:00 AM - 2:00 PM"},
+      {"day": "Tuesday", "hours": "6:00 AM - 2:00 PM"}
+    ],
+    "activeTasks": [
+      {"room": "302", "type": "Cleaning", "priority": "High"},
+      {"room": "303", "type": "Inspection", "priority": "Low"}
+    ]
+  },
+  {
+    "Id": 8,
+    "name": "Michael Johnson",
+    "role": "front desk",
+    "email": "michael.johnson@hotelhub.com",
+    "schedule": [
+      {"day": "Thursday", "hours": "3:00 PM - 11:00 PM"},
+      {"day": "Friday", "hours": "3:00 PM - 11:00 PM"},
+      {"day": "Saturday", "hours": "3:00 PM - 11:00 PM"},
+      {"day": "Sunday", "hours": "3:00 PM - 11:00 PM"},
+      {"day": "Monday", "hours": "3:00 PM - 11:00 PM"}
+    ],
+    "activeTasks": [
+      {"room": "Reception", "type": "Evening Check-in", "priority": "High"},
+      {"room": "Concierge", "type": "Guest Assistance", "priority": "Medium"}
+    ]
+  }
+]
