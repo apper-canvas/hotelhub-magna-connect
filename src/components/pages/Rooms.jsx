@@ -17,12 +17,19 @@ const Rooms = () => {
 const [filter, setFilter] = useState("All")
   const [selectedRoom, setSelectedRoom] = useState(null)
   const [showModal, setShowModal] = useState(false)
-  const [formData, setFormData] = useState({
+const [formData, setFormData] = useState({
     roomNumber: "",
     type: "",
     floor: "",
     rate: "",
-    status: "Available"
+    status: "Available",
+    description: "",
+    room_images: [""],
+    thumbnail_image: "",
+    bed_count: "",
+    max_occupancy: "",
+    room_size: "",
+    view_type: ""
   })
   const [formErrors, setFormErrors] = useState({})
   const loadRooms = async () => {
@@ -54,29 +61,43 @@ const [filter, setFilter] = useState("All")
 
   const handleAddRoom = () => {
     setShowModal(true)
-    setFormData({
+setFormData({
       roomNumber: "",
       type: "",
       floor: "",
       rate: "",
-      status: "Available"
+      status: "Available",
+      description: "",
+      room_images: [""],
+      thumbnail_image: "",
+      bed_count: "",
+      max_occupancy: "",
+      room_size: "",
+      view_type: ""
     })
     setFormErrors({})
   }
 
   const handleCloseModal = () => {
     setShowModal(false)
-    setFormData({
+setFormData({
       roomNumber: "",
       type: "",
       floor: "",
       rate: "",
-      status: "Available"
+      status: "Available",
+      description: "",
+      room_images: [""],
+      thumbnail_image: "",
+      bed_count: "",
+      max_occupancy: "",
+      room_size: "",
+      view_type: ""
     })
     setFormErrors({})
   }
 
-  const validateForm = () => {
+const validateForm = () => {
     const errors = {}
     if (!formData.roomNumber.trim()) {
       errors.roomNumber = "Room number is required"
@@ -89,6 +110,30 @@ const [filter, setFilter] = useState("All")
     }
     if (!formData.rate || formData.rate < 1) {
       errors.rate = "Valid rate is required"
+    }
+    if (!formData.description.trim()) {
+      errors.description = "Description is required"
+    }
+    if (!formData.thumbnail_image.trim()) {
+      errors.thumbnail_image = "Thumbnail image is required"
+    }
+    if (!formData.bed_count || formData.bed_count < 1) {
+      errors.bed_count = "Valid bed count is required"
+    }
+    if (!formData.max_occupancy || formData.max_occupancy < 1) {
+      errors.max_occupancy = "Valid max occupancy is required"
+    }
+    if (!formData.room_size || formData.room_size < 1) {
+      errors.room_size = "Valid room size is required"
+    }
+    if (!formData.view_type) {
+      errors.view_type = "View type is required"
+    }
+
+    // Validate room_images - at least one non-empty URL required
+    const validImages = formData.room_images.filter(img => img.trim())
+    if (validImages.length === 0) {
+      errors.room_images = "At least one room image is required"
     }
 
     // Check for duplicate room number
@@ -112,12 +157,19 @@ const [filter, setFilter] = useState("All")
     }
 
     try {
-      const newRoom = {
+const newRoom = {
         roomNumber: formData.roomNumber.trim(),
         type: formData.type,
         floor: parseInt(formData.floor),
         rate: parseFloat(formData.rate),
         status: formData.status,
+        description: formData.description.trim(),
+        room_images: formData.room_images.filter(img => img.trim()),
+        thumbnail_image: formData.thumbnail_image.trim(),
+        bed_count: parseInt(formData.bed_count),
+        max_occupancy: parseInt(formData.max_occupancy),
+        room_size: parseInt(formData.room_size),
+        view_type: formData.view_type,
         amenities: []
       }
 
@@ -306,8 +358,7 @@ actionLabel={filter === "All" ? "Add Room" : "Clear Filter"}
                 <ApperIcon name="X" size={20} />
               </button>
             </div>
-
-            <form onSubmit={handleSubmit} className="space-y-4">
+<form onSubmit={handleSubmit} className="space-y-4 max-h-[60vh] overflow-y-auto pr-2">
               <div>
                 <label className="block text-sm font-medium text-secondary-700 mb-1">
                   Room Number *
@@ -345,6 +396,171 @@ actionLabel={filter === "All" ? "Add Room" : "Clear Filter"}
                 </select>
                 {formErrors.type && (
                   <p className="text-red-500 text-xs mt-1">{formErrors.type}</p>
+                )}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-secondary-700 mb-1">
+                  Description *
+                </label>
+                <textarea
+                  value={formData.description}
+                  onChange={(e) => handleInputChange("description", e.target.value)}
+                  className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${
+                    formErrors.description ? "border-red-500" : "border-secondary-300"
+                  }`}
+                  placeholder="Detailed description of the room"
+                  rows="3"
+                />
+                {formErrors.description && (
+                  <p className="text-red-500 text-xs mt-1">{formErrors.description}</p>
+                )}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-secondary-700 mb-1">
+                  Room Images *
+                </label>
+                {formData.room_images.map((image, index) => (
+                  <div key={index} className="flex gap-2 mb-2">
+                    <input
+                      type="text"
+                      value={image}
+                      onChange={(e) => {
+                        const newImages = [...formData.room_images]
+                        newImages[index] = e.target.value
+                        setFormData(prev => ({ ...prev, room_images: newImages }))
+                      }}
+                      className={`flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${
+                        formErrors.room_images ? "border-red-500" : "border-secondary-300"
+                      }`}
+                      placeholder="Image URL or path"
+                    />
+                    {formData.room_images.length > 1 && (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const newImages = formData.room_images.filter((_, i) => i !== index)
+                          setFormData(prev => ({ ...prev, room_images: newImages }))
+                        }}
+                        className="px-3 py-2 border border-red-300 text-red-600 rounded-lg hover:bg-red-50"
+                      >
+                        Remove
+                      </button>
+                    )}
+                  </div>
+                ))}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setFormData(prev => ({ ...prev, room_images: [...prev.room_images, ""] }))
+                  }}
+                  className="text-sm text-primary-600 hover:text-primary-700 font-medium"
+                >
+                  + Add Another Image
+                </button>
+                {formErrors.room_images && (
+                  <p className="text-red-500 text-xs mt-1">{formErrors.room_images}</p>
+                )}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-secondary-700 mb-1">
+                  Thumbnail Image *
+                </label>
+                <input
+                  type="text"
+                  value={formData.thumbnail_image}
+                  onChange={(e) => handleInputChange("thumbnail_image", e.target.value)}
+                  className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${
+                    formErrors.thumbnail_image ? "border-red-500" : "border-secondary-300"
+                  }`}
+                  placeholder="Thumbnail image URL or path"
+                />
+                {formErrors.thumbnail_image && (
+                  <p className="text-red-500 text-xs mt-1">{formErrors.thumbnail_image}</p>
+                )}
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-secondary-700 mb-1">
+                    Bed Count *
+                  </label>
+                  <input
+                    type="number"
+                    value={formData.bed_count}
+                    onChange={(e) => handleInputChange("bed_count", e.target.value)}
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${
+                      formErrors.bed_count ? "border-red-500" : "border-secondary-300"
+                    }`}
+                    placeholder="e.g., 2"
+                    min="1"
+                  />
+                  {formErrors.bed_count && (
+                    <p className="text-red-500 text-xs mt-1">{formErrors.bed_count}</p>
+                  )}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-secondary-700 mb-1">
+                    Max Occupancy *
+                  </label>
+                  <input
+                    type="number"
+                    value={formData.max_occupancy}
+                    onChange={(e) => handleInputChange("max_occupancy", e.target.value)}
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${
+                      formErrors.max_occupancy ? "border-red-500" : "border-secondary-300"
+                    }`}
+                    placeholder="e.g., 4"
+                    min="1"
+                  />
+                  {formErrors.max_occupancy && (
+                    <p className="text-red-500 text-xs mt-1">{formErrors.max_occupancy}</p>
+                  )}
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-secondary-700 mb-1">
+                  Room Size (sq ft) *
+                </label>
+                <input
+                  type="number"
+                  value={formData.room_size}
+                  onChange={(e) => handleInputChange("room_size", e.target.value)}
+                  className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${
+                    formErrors.room_size ? "border-red-500" : "border-secondary-300"
+                  }`}
+                  placeholder="e.g., 350"
+                  min="1"
+                />
+                {formErrors.room_size && (
+                  <p className="text-red-500 text-xs mt-1">{formErrors.room_size}</p>
+                )}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-secondary-700 mb-1">
+                  View Type *
+                </label>
+                <select
+                  value={formData.view_type}
+                  onChange={(e) => handleInputChange("view_type", e.target.value)}
+                  className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${
+                    formErrors.view_type ? "border-red-500" : "border-secondary-300"
+                  }`}
+                >
+                  <option value="">Select view type</option>
+                  <option value="Ocean View">Ocean View</option>
+                  <option value="City View">City View</option>
+                  <option value="Garden View">Garden View</option>
+                  <option value="Mountain View">Mountain View</option>
+                  <option value="No View">No View</option>
+                </select>
+                {formErrors.view_type && (
+                  <p className="text-red-500 text-xs mt-1">{formErrors.view_type}</p>
                 )}
               </div>
 

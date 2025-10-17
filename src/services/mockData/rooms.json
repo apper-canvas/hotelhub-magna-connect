@@ -7,7 +7,14 @@
     "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar"],
     "status": "Available",
     "pricePerNight": 120,
-    "photos": ["room101-1.jpg", "room101-2.jpg"]
+    "photos": ["room101-1.jpg", "room101-2.jpg"],
+    "description": "Comfortable standard room with modern amenities and elegant decor",
+    "room_images": ["room101-1.jpg", "room101-2.jpg"],
+    "thumbnail_image": "room101-thumb.jpg",
+    "bed_count": 1,
+    "max_occupancy": 2,
+    "room_size": 250,
+    "view_type": "City View"
   },
   {
     "Id": 2,
@@ -17,7 +24,14 @@
     "amenities": ["Wi-Fi", "TV", "Air Conditioning"],
     "status": "Occupied",
     "pricePerNight": 120,
-    "photos": ["room102-1.jpg"]
+    "photos": ["room102-1.jpg"],
+    "description": "Cozy standard room perfect for business travelers",
+    "room_images": ["room102-1.jpg"],
+    "thumbnail_image": "room102-thumb.jpg",
+    "bed_count": 1,
+    "max_occupancy": 2,
+    "room_size": 240,
+    "view_type": "No View"
   },
   {
     "Id": 3,
@@ -27,7 +41,14 @@
     "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar", "Balcony", "Ocean View"],
     "status": "Available",
     "pricePerNight": 180,
-    "photos": ["room103-1.jpg", "room103-2.jpg", "room103-3.jpg"]
+    "photos": ["room103-1.jpg", "room103-2.jpg", "room103-3.jpg"],
+    "description": "Spacious deluxe room with breathtaking ocean views and private balcony",
+    "room_images": ["room103-1.jpg", "room103-2.jpg", "room103-3.jpg"],
+    "thumbnail_image": "room103-thumb.jpg",
+    "bed_count": 2,
+    "max_occupancy": 4,
+    "room_size": 350,
+    "view_type": "Ocean View"
   },
   {
     "Id": 4,
@@ -37,7 +58,14 @@
     "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar", "Balcony", "Ocean View", "Jacuzzi", "Living Room"],
     "status": "Available",
     "pricePerNight": 300,
-    "photos": ["room201-1.jpg", "room201-2.jpg", "room201-3.jpg", "room201-4.jpg"]
+    "photos": ["room201-1.jpg", "room201-2.jpg", "room201-3.jpg", "room201-4.jpg"],
+    "description": "Luxurious suite with separate living area, jacuzzi, and stunning ocean views",
+    "room_images": ["room201-1.jpg", "room201-2.jpg", "room201-3.jpg", "room201-4.jpg"],
+    "thumbnail_image": "room201-thumb.jpg",
+    "bed_count": 2,
+    "max_occupancy": 6,
+    "room_size": 550,
+    "view_type": "Ocean View"
   },
   {
     "Id": 5,
@@ -47,7 +75,14 @@
     "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar", "Balcony"],
     "status": "Maintenance",
     "pricePerNight": 180,
-    "photos": ["room202-1.jpg"]
+    "photos": ["room202-1.jpg"],
+    "description": "Premium deluxe room with modern furnishings and balcony access",
+    "room_images": ["room202-1.jpg"],
+    "thumbnail_image": "room202-thumb.jpg",
+    "bed_count": 2,
+    "max_occupancy": 4,
+    "room_size": 340,
+    "view_type": "City View"
   },
   {
     "Id": 6,
@@ -57,7 +92,14 @@
     "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar"],
     "status": "Clean",
     "pricePerNight": 120,
-    "photos": ["room203-1.jpg", "room203-2.jpg"]
+    "photos": ["room203-1.jpg", "room203-2.jpg"],
+    "description": "Clean and comfortable standard room ideal for short stays",
+    "room_images": ["room203-1.jpg", "room203-2.jpg"],
+    "thumbnail_image": "room203-thumb.jpg",
+    "bed_count": 1,
+    "max_occupancy": 2,
+    "room_size": 245,
+    "view_type": "Garden View"
   },
   {
     "Id": 7,
@@ -67,7 +109,14 @@
     "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar", "Balcony", "City View", "Jacuzzi", "Living Room", "Kitchenette"],
     "status": "Occupied",
     "pricePerNight": 320,
-    "photos": ["room301-1.jpg", "room301-2.jpg", "room301-3.jpg"]
+    "photos": ["room301-1.jpg", "room301-2.jpg", "room301-3.jpg"],
+    "description": "Executive suite with kitchenette, living area, and panoramic city views",
+    "room_images": ["room301-1.jpg", "room301-2.jpg", "room301-3.jpg"],
+    "thumbnail_image": "room301-thumb.jpg",
+    "bed_count": 2,
+    "max_occupancy": 6,
+    "room_size": 580,
+    "view_type": "City View"
   },
   {
     "Id": 8,
@@ -77,7 +126,14 @@
     "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar", "Balcony", "City View"],
     "status": "Dirty",
     "pricePerNight": 180,
-    "photos": ["room302-1.jpg"]
+    "photos": ["room302-1.jpg"],
+    "description": "Stylish deluxe room with city skyline views from private balcony",
+    "room_images": ["room302-1.jpg"],
+    "thumbnail_image": "room302-thumb.jpg",
+    "bed_count": 2,
+    "max_occupancy": 4,
+    "room_size": 345,
+    "view_type": "City View"
   },
   {
     "Id": 9,
@@ -87,7 +143,14 @@
     "amenities": ["Wi-Fi", "TV", "Air Conditioning"],
     "status": "Available",
     "pricePerNight": 110,
-    "photos": ["room303-1.jpg"]
+    "photos": ["room303-1.jpg"],
+    "description": "Budget-friendly standard room with essential amenities",
+    "room_images": ["room303-1.jpg"],
+    "thumbnail_image": "room303-thumb.jpg",
+    "bed_count": 1,
+    "max_occupancy": 3,
+    "room_size": 230,
+    "view_type": "No View"
   },
   {
     "Id": 10,
@@ -97,7 +160,14 @@
     "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar", "Balcony", "Ocean View", "Jacuzzi", "Living Room", "Kitchenette", "Dining Room", "Office"],
     "status": "Available",
     "pricePerNight": 500,
-    "photos": ["room401-1.jpg", "room401-2.jpg", "room401-3.jpg", "room401-4.jpg", "room401-5.jpg"]
+    "photos": ["room401-1.jpg", "room401-2.jpg", "room401-3.jpg", "room401-4.jpg", "room401-5.jpg"],
+    "description": "Ultimate luxury presidential suite with dedicated office, dining room, and spectacular ocean views",
+    "room_images": ["room401-1.jpg", "room401-2.jpg", "room401-3.jpg", "room401-4.jpg", "room401-5.jpg"],
+    "thumbnail_image": "room401-thumb.jpg",
+    "bed_count": 3,
+    "max_occupancy": 8,
+    "room_size": 850,
+    "view_type": "Ocean View"
   },
   {
     "Id": 11,
@@ -107,7 +177,14 @@
     "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar"],
     "status": "Available",
     "pricePerNight": 120,
-    "photos": ["room104-1.jpg"]
+    "photos": ["room104-1.jpg"],
+    "description": "Well-appointed standard room with mini bar and comfortable bedding",
+    "room_images": ["room104-1.jpg"],
+    "thumbnail_image": "room104-thumb.jpg",
+    "bed_count": 1,
+    "max_occupancy": 2,
+    "room_size": 248,
+    "view_type": "Garden View"
   },
   {
     "Id": 12,
@@ -117,6 +194,13 @@
     "amenities": ["Wi-Fi", "TV", "Air Conditioning", "Mini Bar", "Balcony", "Garden View"],
     "status": "Available",
     "pricePerNight": 160,
-    "photos": ["room105-1.jpg", "room105-2.jpg"]
+    "photos": ["room105-1.jpg", "room105-2.jpg"],
+    "description": "Peaceful deluxe room overlooking lush garden with private balcony",
+    "room_images": ["room105-1.jpg", "room105-2.jpg"],
+    "thumbnail_image": "room105-thumb.jpg",
+    "bed_count": 2,
+    "max_occupancy": 4,
+    "room_size": 360,
+    "view_type": "Garden View"
   }
 ]

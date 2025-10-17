@@ -15,10 +15,25 @@ const roomsService = {
     return { ...room }
   },
 
-  async create(roomData) {
+async create(roomData) {
     await new Promise(resolve => setTimeout(resolve, 500))
     const newId = Math.max(...roomsData.map(room => room.Id)) + 1
-    const newRoom = { ...roomData, Id: newId }
+    const newRoom = {
+      Id: newId,
+      roomNumber: roomData.roomNumber,
+      type: roomData.type,
+      floor: roomData.floor,
+      rate: roomData.rate,
+      status: roomData.status,
+      description: roomData.description,
+      room_images: roomData.room_images,
+      thumbnail_image: roomData.thumbnail_image,
+      bed_count: roomData.bed_count,
+      max_occupancy: roomData.max_occupancy,
+      room_size: roomData.room_size,
+      view_type: roomData.view_type,
+      amenities: roomData.amenities || []
+    }
     roomsData.push(newRoom)
     return { ...newRoom }
   },
