@@ -346,9 +346,9 @@ actionLabel={filter === "All" ? "Add Room" : "Clear Filter"}
         </div>
       )}
 {/* Create Room Modal */}
-      {showModal && (
+{showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <Card className="w-full max-w-md bg-white">
+          <Card className="w-full max-w-2xl bg-white px-4">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-xl font-semibold text-secondary-900">Add New Room</h2>
               <button
@@ -358,7 +358,7 @@ actionLabel={filter === "All" ? "Add Room" : "Clear Filter"}
                 <ApperIcon name="X" size={20} />
               </button>
             </div>
-<form onSubmit={handleSubmit} className="space-y-4 max-h-[60vh] overflow-y-auto pr-2">
+<form onSubmit={handleSubmit} className="space-y-6 max-h-[70vh] overflow-y-auto pl-2 pr-2">
               <div>
                 <label className="block text-sm font-medium text-secondary-700 mb-1">
                   Room Number *
